@@ -6,8 +6,6 @@ public $file;
 
 public $load;
 
-public $indexModel;
-
 function __construct() {
 	$this->load = new Load();
 }
