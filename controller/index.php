@@ -2,12 +2,12 @@
 
 Class indexController Extends Controller {
 
-public function index() {
-	$this->load->model('index');
+public function index($name) {
+	$this->load->model($name);
 
 	$data = $this->load->model->user_info();
 
-	$this->load->view('index', $data);
+	$this->load->view($name, $data);
 
 }
 

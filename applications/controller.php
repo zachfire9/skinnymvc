@@ -10,16 +10,14 @@ function __construct() {
 	$this->load = new Load();
 }
 
-function loader($name, $path) {
+function loader($name) {
 	$controllerName = $name . 'Controller';
-	$this->file = $path . '/controller/' . $name . '.php';
+	$this->file = __SITE_PATH . '/controller/' . $name . '.php';
 		
 	include $this->file;
 	
 	$controller = new $controllerName();
-	$controller->index($path);
+	$controller->index($name);
 }
-
-
 
 }

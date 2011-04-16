@@ -6,4 +6,4 @@ require(__SITE_PATH . '/applications/load.php');
 
 $router = new Router();
 
-$router->controller('index');
+$router->controller($array_tmp_uri[0]);
