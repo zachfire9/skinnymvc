@@ -6,14 +6,14 @@ public $viewPath;
 
 public $modelPath;
 
-public $indexModel;
+public $model;
 
 function model($name, $path) {
 	$this->modelPath = $path . '/models/' . $name . '.php';
 		
 	include $this->modelPath;
 
-	$this->indexModel = new indexModel();
+	$this->model = new indexModel();
 }
 
 function view($name, $path, $data = null) {
