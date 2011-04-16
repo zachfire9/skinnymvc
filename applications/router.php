@@ -2,13 +2,9 @@
 
 Class Router {
 
-public $path;
-
-function controller($sitePath, $name) {
-	$this->path = $sitePath;
-
+function controller($name) {
 	$baseController = new Controller();
-	$baseController->loader($name, $this->path);
+	$baseController->loader($name, __SITE_PATH);
 }
 
 }

@@ -8,20 +8,20 @@ public $modelPath;
 
 public $model;
 
-function model($name, $path) {
-	$this->modelPath = $path . '/models/' . $name . '.php';
+function model($name) {
+	$this->modelPath = __SITE_PATH . '/models/' . $name . '.php';
 		
 	include $this->modelPath;
 
 	$this->model = new indexModel();
 }
 
-function view($name, $path, $data = null) {
+function view($name, $data = null) {
 	if(is_array($data)) {
 		extract($data);
 	}
 
-	$this->viewPath = $path . '/views/' . $name . '.php';
+	$this->viewPath = __SITE_PATH . '/views/' . $name . '.php';
 		
 	include $this->viewPath;
 }

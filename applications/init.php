@@ -6,4 +6,4 @@ require(__SITE_PATH . '/applications/load.php');
 
 $router = new Router();
 
-$router->controller(__SITE_PATH, 'index');
+$router->controller('index');
