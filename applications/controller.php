@@ -17,7 +17,7 @@ function loader($name) {
 	include $this->file;
 	
 	$controller = new $controllerName();
-	$controller->index($name);
+	$controller->index();
 }
 
 }
