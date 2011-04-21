@@ -23,6 +23,9 @@ function view($name, $data = null) {
 
 	$this->viewPath = __SITE_PATH . '/views/' . $name . '.php';
 		
+	if(is_readable($this->viewPath) == false)
+		$this->viewPath = __SITE_PATH . '/views/index.php';
+
 	include $this->viewPath;
 }
 
